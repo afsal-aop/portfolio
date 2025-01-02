@@ -1,0 +1,192 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+}
+
+header ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+}
+
+/* Education Section */
+#education {
+    margin-top: 40px;
+}
+
+.resume-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.resume-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.resume-item .date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.resume-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.resume-item .school {
+    display: block;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Hero Section */
+.site-hero {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.site-heading {
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.static-name {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #00ff00;
+}
+
+.animated-text {
+    margin-top: 20px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.text-slide {
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: textAnimation 9s infinite;
+}
+
+.text-slide:nth-child(1) { animation-delay: 0s; }
+.text-slide:nth-child(2) { animation-delay: 3s; }
+.text-slide:nth-child(3) { animation-delay: 6s; }
+
+@keyframes textAnimation {
+    0% { transform: translateY(100%); opacity: 0; }
+    10%, 30% { transform: translateY(0%); opacity: 1; }
+    50%, 100% { transform: translateY(-100%); opacity: 0; }
+}
+
+.glitch {
+    font-size: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.text_1, .text_2 {
+    overflow: hidden;
+    font-size: 35px;
+    color: white;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation-duration: 15s;
+    animation-timing-function: steps(25, end);
+    animation-iteration-count: infinite;
+}
+
+.text_1::after, .text_2::after {
+    content: "_";
+    position: absolute;
+    right: 0;
+    color: green;
+    animation: caret infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+}
+
+@keyframes caret {
+    0%, 100% { opacity: 0; }
+    80% { opacity: 1; }
+}
+
+.text_1 { animation: text1 15s steps(25, end) infinite; }
+.text_2 { animation: text2 15s steps(25, end) infinite; }
+
+@keyframes text1 {
+    0%, 50%, 100% { width: 0; }
+    10%, 40% { width: 18em; }
+}
+
+@keyframes text2 {
+    0%, 50%, 100% { width: 0; }
+    60%, 90% { width: 11em; }
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

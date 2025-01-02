@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<section id="section-about">
+    <div class="container">
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
+                <img src="{{ url_for('static', filename='assets/images/my.jpg') }}" alt="My Photo" class="img-fluid">
+            </div>
+            <div class="col-lg-5 pl-lg-5">
+                <div class="section-heading">
+                    <h2>About <strong>Me</strong></h2>
+                </div>
+                <p class="lead">Programmer, Problem Solver, Entrepreneur</p>
+                <p class="mb-5">I like to work in the field of artificial intelligence. Python is my favorite programming language, but I am always ready to learn new technologies. I'm also the co-founder of a brand called ManWorks.</p>
+                <p>
+                    <a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Hire Me</a>
+                    <a href="#" class="btn btn-secondary px-4 py-2 btn-sm">Download CV</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

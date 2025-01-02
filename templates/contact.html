@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Contact Me</h2>
+                <form method="post" action="/send-message">
+                    <div class="form-group mb-3">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2>Get in Touch</h2>
+                <p><strong>Email:</strong><br>aopafsal@gmail.com</p>
+                <p><strong>Phone:</strong><br>+91 8075034262</p>
+                <p><strong>Address:</strong><br>punnackappara, Kannur, Kerala, India</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
